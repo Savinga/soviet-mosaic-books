@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Книги о советской мозаике</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f5f0e5;
+            color: #18333a;
+            line-height: 1.5;
+            padding: 20px;
+        }
+        .wrap {
+            max-width: 680px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 42px;
+            margin: 20px 0 10px;
+        }
+        .lead {
+            font-size: 19px;
+            color: #395057;
+            margin-bottom: 30px;
+        }
+        .book-list {
+            display: grid;
+            gap: 24px;
+            margin: 30px 0;
+        }
+        .book {
+            background: #fff;
+            border-radius: 20px;
+            padding: 0;
+            border: 1px solid #ddd5c8;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+        .book-cover {
+            aspect-ratio: 4/5;
+            background-size: cover;
+            background-position: center;
+            min-height: 180px;
+        }
+        .book-body {
+            padding: 20px 20px 20px 16px;
+        }
+        .book h3 {
+            font-size: 20px;
+            margin: 0 0 4px;
+        }
+        .meta {
+            color: #66716f;
+            font-size: 13px;
+            margin: 0 0 6px;
+        }
+        .rating {
+            color: #b56a25;
+            font-weight: 700;
+            font-size: 15px;
+            margin: 6px 0 10px;
+        }
+        .book-body p {
+            font-size: 15px;
+            margin: 0 0 6px;
+            color: #2d4a52;
+        }
+        .book-body .why {
+            font-size: 14px;
+            color: #24616a;
+            font-weight: 600;
+        }
+        .tag {
+            display: inline-block;
+            background: #e6eee8;
+            color: #365147;
+            border-radius: 999px;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+        .social-links {
+            margin-top: 30px;
+            display: grid;
+            gap: 10px;
+        }
+        .social-link {
+            display: block;
+            background: #fff;
+            padding: 12px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #18333a;
+            border: 1px solid #ddd5c8;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .social-link:hover {
+            background: #f0ebe0;
+        }
+        .button {
+            background: #ae4c3a;
+            color: #fff;
+            border: 0;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.2s;
+        }
+        .button:hover {
+            background: #9e4030;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bcc5bc;
+            border-radius: 12px;
+            font-size: 16px;
+            margin-top: 6px;
+        }
+        label {
+            font-weight: 700;
+            display: block;
+            margin-top: 16px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #687775;
+            font-size: 13px;
+        }
+        .block-gray {
+            background: #e2ded0;
+            padding: 24px;
+            border-radius: 16px;
+            margin: 30px 0;
+        }
+        .block-gray li {
+            padding: 6px 0;
+            border-bottom: 1px solid #ccc;
+            list-style: none;
+        }
+        .block-gray li:last-child {
+            border-bottom: none;
+        }
+        .block-gray ol {
+            padding: 0;
+        }
+        .author-block {
+            background: #24616a;
+            color: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .author-block img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+        .author-block h2 {
+            font-size: 22px;
+            margin: 0 0 4px;
+        }
+        .author-block p {
+            color: #dce8e3;
+            margin: 0;
+        }
+        .contacts-title {
+            font-size: 28px;
+            margin: 30px 0 10px;
+        }
+        @media (max-width: 500px) {
+            .book {
+                grid-template-columns: 1fr;
+            }
+            .book-cover {
+                min-height: 200px;
+            }
+            .author-block {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .author-block img {
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <h1>📚 Книги о советской мозаике</h1>
+    <p class="lead">Моя подборка для тех, кто хочет не просто смотреть на советские мозаики, а начать их видеть.</p>
+
+    <div class="book-list">
+
+        <!-- КНИГА 1 -->
+        <div class="book">
+            <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/c9139f16-f808-5691-b8d3-a23d3e39a7e6/616850a5-9c6d-58f6-b8ad-2521dd406e83.jpg')"></div>
+            <div class="book-body">
+                <h3>Москва. Искусство для архитектуры</h3>
+                <p class="meta">Анна Петрова, Евгения Куделина, Джеймс Хилл · DOM Publishers · 2022</p>
+                <p class="rating">★★★★★ 5/5</p>
+                <p>История московской монументальной мозаики 1925–1991 годов: ар-деко, соцреализм, модернизм и постмодернизм.</p>
+                <p class="why">Почему советую: помогает увидеть за отдельными панно целую систему — связь художника, архитектуры и времени.</p>
+                <span class="tag">Для первого знакомства</span>
+            </div>
+        </div>
+
+        <!-- КНИГА 2 -->
+        <div class="book">
+            <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/1bd28886-02ae-5701-b182-f4c6cc8df73c/26dc2cc7-9f9d-5161-8aa7-5c547338af3a.jpg')"></div>
+            <div class="book-body">
+                <h3>Советская монументальная мозаика Юга России</h3>
+                <p class="meta">Игорь Бычков, Николай Васильев, Артур Токарев · Кучково поле Музеон · 2024</p>
+                <p class="rating">★★★★★ 5/5</p>
+                <p>Исследование мозаичного наследия Юга России: от Волгограда до республик Северного Кавказа.</p>
+                <p class="why">Почему советую: показывает, насколько региональным и разнообразным был язык советской мозаики.</p>
+                <span class="tag">Для насмотренности</span>
+            </div>
+        </div>
+
+        <!-- КНИГА 3 -->
+        <div class="book">
+            <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/2e267f9b-59d4-5d44-99f2-b4e03f2a45b5/2dd9ddaa-bba4-5d58-bcbc-afa00e0a376a.jpg')"></div>
+            <div class="book-body">
+                <h3>Монументальная мозаика Москвы: между утопией и пропагандой</h3>
+                <p class="meta">Анна Петрова, Екатерина Рускевич, Джеймс Хилл, Евгения Куделина · Бомбора · 2021</p>
+                <p class="rating">★★★★☆ 4,5/5</p>
+                <p>История мозаики Москвы через смену идеологии: от авангарда до позднесоветского периода.</p>
+                <p class="why">Почему советую: после неё панно начинают читаться как рассказ о труде, космосе, спорте и времени.</p>
+                <span class="tag">Для контекста</span>
+            </div>
+        </div>
+
+        <!-- КНИГА 4 -->
+        <div class="book">
+            <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/9cbbd57e-b381-54e1-8da4-6a2d43717acd/5e4a1dea-4af9-56cc-a486-c7d1dda0e0b5.jpg')"></div>
+            <div class="book-body">
+                <h3>Монументальное искусство СССР</h3>
+                <p class="meta">Арсений Котов · АСТ</p>
+                <p class="rating">★★★★☆ 4,5/5</p>
+                <p>Фотографический альбом о мозаиках, сграффито, витражах, фресках и других произведениях.</p>
+                <p class="why">Почему советую: его можно открыть на любой странице и рассматривать — как визуальную летопись исчезающего искусства.</p>
+                <span class="tag">Для вдохновения</span>
+            </div>
+        </div>
+
+        <!-- КНИГА 5 (без обложки, красивая заглушка) -->
+        <div class="book">
+            <div class="book-cover" style="background: linear-gradient(145deg, #7c613e, #dfc797 48%, #506766 48%); display:flex; align-items:center; justify-content:center; color:#18333a; font-weight:700; font-size:18px; text-align:center; padding:20px;">
+                Монументально-декоративное<br>искусство<br>Советской Татарии
+            </div>
+            <div class="book-body">
+                <h3>Монументально-декоративное искусство Советской Татарии</h3>
+                <p class="meta">Гузель Фуадовна Валеева-Сулейманова · Казань · 1984</p>
+                <p class="rating">★★★★☆ 4/5</p>
+                <p>Специализированное исследование монументально-декоративного искусства Татарстана советского периода.</p>
+                <p class="why">Почему советую: помогает увидеть, как местные художественные традиции входят в советскую визуальную культуру.</p>
+                <span class="tag">Для исследования</span>
+            </div>
+        </div>
+
+        <!-- КНИГА 6 (с обложкой) -->
+        <div class="book">
+            <div class="book-cover" style="background-image: url('https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6ee3e57f2527ab67a7997c3407a7836559ec9bdad43ff0491891800165eb6bd53b8af413661e2560c7010cf24c61b372fef0d75ea73290697df3a5d31f1cbf1950')"></div>
+            <div class="book-body">
+                <h3>Советское монументальное искусство</h3>
+                <p class="meta">Серия «Советский художник» · 1970–1980-е</p>
+                <p class="rating">★★★★☆ 4/5</p>
+                <p>Старые издания, ценные взглядом самой эпохи на художников, произведения и принципы работы.</p>
+                <p class="why">Почему советую: современные книги помогают найти мозаику, а эти — понять, как её осмысляли внутри СССР.</p>
+                <span class="tag">Для глубокого погружения</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ПОРЯДОК ЧТЕНИЯ -->
+    <div class="block-gray">
+        <h2>📖 Мой порядок чтения</h2>
+        <p style="margin-bottom:12px;">Можно просто смотреть. Но если хочется двигаться последовательно, начните так:</p>
+        <ol>
+            <li>«Москва. Искусство для архитектуры» — увидеть масштаб.</li>
+            <li>«Между утопией и пропагандой» — понять контекст.</li>
+            <li>«Мозаика Юга России» — открыть региональное разнообразие.</li>
+            <li>Арсений Котов — собрать визуальную насмотренность.</li>
+            <li>Советская Татария — углубиться в региональную историю.</li>
+            <li>Старые издания — перейти к первоисточникам.</li>
+        </ol>
+    </div>
+
+    <!-- ОБ АВТОРЕ С ВАШИМ ФОТО -->
+    <div class="author-block">
+        <img src="inga.jpg" alt="Инга Савина — автор подборки о мозаике" />
+        <div>
+            <h2>👩‍🎨 Об авторе</h2>
+            <p>Собираю мозаику — и учусь её видеть. Эта подборка — личный маршрут по книгам, которые помогают замечать цвет, ритм, форму, материал и пространство.</p>
+        </div>
+    </div>
+
+    <!-- КОНТАКТЫ -->
+    <h2 class="contacts-title">📱 Связаться</h2>
+    <p>Расскажите о мозаике, книге или городе, который стоит добавить в следующую подборку.</p>
+
+    <form id="whatsapp-form">
+        <label>Ваше имя</label>
+        <input id="name" placeholder="Как к вам обращаться?" required>
+
+        <label>Ваш город</label>
+        <input id="city" placeholder="Например, Амстердам">
+
+        <label>Сообщение</label>
+        <textarea id="message" rows="4" placeholder="Хочу рассказать о…" required></textarea>
+
+        <button class="button" type="submit">📱 Написать в WhatsApp</button>
+    </form>
+
+    <div class="social-links">
+        <a href="https://instagram.com/art.savina.inga" target="_blank" class="social-link">📸 Instagram: @art.savina.inga</a>
+        <a href="https://wa.me/79207517515" target="_blank" class="social-link">💬 WhatsApp: +7 920 751-75-15</a>
+        <a href="https://vk.ru/ingoosik" target="_blank" class="social-link">🎯 VK: @ingoosik</a>
+        <a href="https://t.me/sav_ingart" target="_blank" class="social-link">✈️ Telegram: @sav_ingart</a>
+        <a href="https://youtube.com/@mosaicode" target="_blank" class="social-link">▶️ YouTube: @mosaicode</a>
+    </div>
+
+    <footer>
+        <p>Книги помогают увидеть мозаику. Самое интересное начинается, когда начинаешь смотреть внимательнее.</p>
+        <p style="margin-top:8px;">© 2026 · Инга Савина</p>
+    </footer>
+
+</div>
+
+<script>
+document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var city = document.getElementById('city').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var text = 'Здравствуйте! Меня зовут ' + name + (city ? ' Я из ' + city + '.' : '') + '\n\n' + message + '\n\nПишу по поводу гида «Книги о советской мозаике».';
+    window.open('https://wa.me/79207517515?text=' + encodeURIComponent(text), '_blank');
+});
+</script>
+
+</body>
+</html>
