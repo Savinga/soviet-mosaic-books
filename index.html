@@ -31,7 +31,6 @@
             margin-bottom: 30px;
         }
 
-        /* ВСТУПЛЕНИЕ */
         .intro-block {
             background: #fff;
             border-radius: 20px;
@@ -40,15 +39,29 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
         }
-        .intro-block h2 {
-            font-size: 24px;
-            margin: 0 0 12px;
+        .intro-header {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .intro-header img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #e2ded0;
+        }
+        .intro-header h2 {
+            font-size: 26px;
+            margin: 0;
             color: #18333a;
         }
-        .intro-block h3 {
-            font-size: 18px;
-            margin: 18px 0 8px;
-            color: #24616a;
+        .intro-header .subtitle {
+            color: #66716f;
+            font-size: 15px;
+            margin: 4px 0 0;
         }
         .intro-block p {
             font-size: 16px;
@@ -61,14 +74,6 @@
         .intro-block .highlight {
             color: #ae4c3a;
             font-weight: 700;
-        }
-        .intro-block ul {
-            padding-left: 20px;
-            margin: 8px 0 12px;
-            color: #2d4a52;
-        }
-        .intro-block ul li {
-            margin-bottom: 4px;
         }
 
         .book-list {
@@ -130,6 +135,39 @@
             font-weight: 700;
             margin-top: 8px;
         }
+
+        .outro-block {
+            background: #24616a;
+            color: white;
+            padding: 28px 24px;
+            border-radius: 20px;
+            margin: 30px 0 20px;
+        }
+        .outro-block h2 {
+            font-size: 22px;
+            margin: 0 0 12px;
+        }
+        .outro-block p {
+            font-size: 16px;
+            color: #dce8e3;
+            margin: 0 0 12px;
+        }
+        .outro-block p:last-child {
+            margin-bottom: 0;
+        }
+        .outro-block ul {
+            padding-left: 20px;
+            margin: 8px 0 12px;
+            color: #dce8e3;
+        }
+        .outro-block ul li {
+            margin-bottom: 4px;
+        }
+        .outro-block .highlight {
+            color: #f0bd70;
+            font-weight: 700;
+        }
+
         .social-links {
             margin-top: 30px;
             display: grid;
@@ -201,49 +239,23 @@
         .block-gray ol {
             padding: 0;
         }
-        .author-block {
-            background: #24616a;
-            color: white;
-            padding: 24px;
-            border-radius: 16px;
-            margin: 30px 0;
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 20px;
-            align-items: center;
-        }
-        .author-block img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid rgba(255,255,255,0.3);
-        }
-        .author-block h2 {
-            font-size: 22px;
-            margin: 0 0 4px;
-        }
-        .author-block p {
-            color: #dce8e3;
-            margin: 0;
-        }
         .contacts-title {
             font-size: 28px;
             margin: 30px 0 10px;
         }
         @media (max-width: 500px) {
+            .intro-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .intro-header img {
+                margin: 0 auto;
+            }
             .book {
                 grid-template-columns: 1fr;
             }
             .book-cover {
                 min-height: 200px;
-            }
-            .author-block {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .author-block img {
-                margin: 0 auto;
             }
             h1 {
                 font-size: 32px;
@@ -258,44 +270,27 @@
     <p class="subhead">Подборка для тех, кто хочет начать видеть мозаику вокруг себя</p>
 
     <!-- ======================================== -->
-    <!-- ВСТУПЛЕНИЕ — ВАШ ТЕКСТ                   -->
+    <!-- КРАТКОЕ ВСТУПЛЕНИЕ (коротко, ёмко)      -->
     <!-- ======================================== -->
     <div class="intro-block">
-        <h2>👋 Меня зовут Инга Савина</h2>
-        <p>Я художник-мозаичист и исследователь советского монументального искусства.</p>
-        <p>Несколько лет я занимаюсь мозаикой — создаю собственные работы, изучаю историю этого искусства и рассказываю о советских мозаиках.</p>
+        <div class="intro-header">
+            <img src="inga.jpg" alt="Инга Савина" />
+            <div>
+                <h2>👋 Инга Савина</h2>
+                <p class="subtitle">Художник-мозаичист и исследователь советского монументального искусства</p>
+            </div>
+        </div>
 
-        <h3>Почему советская мозаика?</h3>
-        <p>Потому что это гораздо больше, чем просто оформление стен.</p>
-        <p>Советская мозаика — отдельный огромный пласт истории нашей страны. В ней отражены время, люди, идеи, достижения и представления эпохи о будущем.</p>
-        <p>И самое интересное — значительная часть этого наследия до сих пор находится прямо перед нами. Мы каждый день проходим мимо мозаичных панно, витражей, сграффито и барельефов и часто даже не замечаем их.</p>
-        <p><span class="highlight">Мне хочется это изменить.</span></p>
-        <p>Я рассказываю истории, которые скрываются за мозаиками: кто и зачем их создавал, о чём они говорят, какие технологии и материалы использовали художники и почему одни работы сохранились, а другие исчезли.</p>
-
-        <h3>Чем я ещё занимаюсь</h3>
-        <p>Я не только исследую мозаику, но и сама работаю как художник-мозаичист:</p>
-        <ul>
-            <li>создаю мозаику для интерьеров и общественных пространств;</li>
-            <li>провожу мастер-классы — от знакомства с материалом до создания собственной работы;</li>
-            <li>читаю лекции о советской мозаике: об истории, художниках, технологиях и конкретных произведениях.</li>
-        </ul>
-
-        <h3>Со мной можно взаимодействовать по-разному</h3>
-        <ul>
-            <li>заказать мозаику для интерьера или общественного пространства;</li>
-            <li>прийти на мастер-класс и попробовать создать мозаику самому;</li>
-            <li>организовать обучение;</li>
-            <li>пригласить меня с лекцией о советском монументальном искусстве;</li>
-            <li>предложить совместный исследовательский или выставочный проект.</li>
-        </ul>
-        <p>А ещё я веду блог, где рассказываю о мозаике, её истории и людях, которые её создавали.</p>
-        <p style="font-weight:600; color:#18333a; margin-top:16px;">Если вам интересна мозаика — как искусство, история, профессия или часть пространства, — свяжитесь со мной напрямую. Контакты ниже 👇</p>
+        <p>Советская мозаика — это не просто оформление стен. Это огромный пласт истории, который до сих пор находится прямо перед нами: на фасадах, в метро, в холлах заводов и дворцов культуры.</p>
+        <p>Мы проходим мимо каждый день. И часто даже не замечаем.</p>
+        <p>Мне хочется это изменить. В этом гиде — книги, с которых я сама начинала своё знакомство с мозаикой. Они помогут вам <span class="highlight">начать видеть</span> цвет, ритм, форму, материал и время.</p>
     </div>
 
-    <!-- КНИГИ -->
+    <!-- ======================================== -->
+    <!-- КНИГИ                                    -->
+    <!-- ======================================== -->
     <div class="book-list">
 
-        <!-- КНИГА 1 -->
         <div class="book">
             <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/c9139f16-f808-5691-b8d3-a23d3e39a7e6/616850a5-9c6d-58f6-b8ad-2521dd406e83.jpg')"></div>
             <div class="book-body">
@@ -308,7 +303,6 @@
             </div>
         </div>
 
-        <!-- КНИГА 2 -->
         <div class="book">
             <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/1bd28886-02ae-5701-b182-f4c6cc8df73c/26dc2cc7-9f9d-5161-8aa7-5c547338af3a.jpg')"></div>
             <div class="book-body">
@@ -321,7 +315,6 @@
             </div>
         </div>
 
-        <!-- КНИГА 3 -->
         <div class="book">
             <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/2e267f9b-59d4-5d44-99f2-b4e03f2a45b5/2dd9ddaa-bba4-5d58-bcbc-afa00e0a376a.jpg')"></div>
             <div class="book-body">
@@ -334,7 +327,6 @@
             </div>
         </div>
 
-        <!-- КНИГА 4 -->
         <div class="book">
             <div class="book-cover" style="background-image: url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/9cbbd57e-b381-54e1-8da4-6a2d43717acd/5e4a1dea-4af9-56cc-a486-c7d1dda0e0b5.jpg')"></div>
             <div class="book-body">
@@ -347,7 +339,6 @@
             </div>
         </div>
 
-        <!-- КНИГА 5 -->
         <div class="book">
             <div class="book-cover" style="background: linear-gradient(145deg, #7c613e, #dfc797 48%, #506766 48%); display:flex; align-items:center; justify-content:center; color:#18333a; font-weight:700; font-size:18px; text-align:center; padding:20px;">
                 Монументально-декоративное<br>искусство<br>Советской Татарии
@@ -362,7 +353,6 @@
             </div>
         </div>
 
-        <!-- КНИГА 6 -->
         <div class="book">
             <div class="book-cover" style="background-image: url('https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6ee3e57f2527ab67a7997c3407a7836559ec9bdad43ff0491891800165eb6bd53b8af413661e2560c7010cf24c61b372fef0d75ea73290697df3a5d31f1cbf1950')"></div>
             <div class="book-body">
@@ -377,7 +367,9 @@
 
     </div>
 
-    <!-- ПОРЯДОК ЧТЕНИЯ -->
+    <!-- ======================================== -->
+    <!-- ПОРЯДОК ЧТЕНИЯ                           -->
+    <!-- ======================================== -->
     <div class="block-gray">
         <h2>📖 Мой порядок чтения</h2>
         <p style="margin-bottom:12px;">Можно просто смотреть. Но если хочется двигаться последовательно, начните так:</p>
@@ -391,16 +383,39 @@
         </ol>
     </div>
 
-    <!-- ОБ АВТОРЕ -->
-    <div class="author-block">
-        <img src="inga.jpg" alt="Инга Савина — автор подборки о мозаике" />
-        <div>
-            <h2>👩‍🎨 Инга Савина</h2>
-            <p>Художник-мозаичист и исследователь советского монументального искусства. Создаёт мозаику, читает лекции, проводит мастер-классы и делится историями о мозаиках в своём блоге.</p>
-        </div>
+    <!-- ======================================== -->
+    <!-- ЗАКЛЮЧЕНИЕ — РАЗВЁРНУТЫЙ ТЕКСТ ОБ АВТОРЕ -->
+    <!-- ======================================== -->
+    <div class="outro-block">
+        <h2>Почему я составляю такие подборки</h2>
+
+        <p>Мозаика — не просто материал или техника. Это способ говорить с городом.</p>
+        <p>Я рассказываю истории, которые скрываются за мозаиками: кто и зачем их создавал, о чём они говорят, какие технологии использовали художники и почему одни работы сохранились, а другие исчезли.</p>
+
+        <p><span class="highlight">Но я не только исследую мозаику.</span> Я сама работаю как художник-мозаичист:</p>
+        <ul>
+            <li>создаю мозаику для интерьеров и общественных пространств;</li>
+            <li>провожу мастер-классы — от знакомства с материалом до создания собственной работы;</li>
+            <li>читаю лекции о советской мозаике: об истории, художниках, технологиях и конкретных произведениях.</li>
+        </ul>
+
+        <p><span class="highlight">Со мной можно взаимодействовать по-разному:</span></p>
+        <ul>
+            <li>заказать мозаику для интерьера или общественного пространства;</li>
+            <li>прийти на мастер-класс и попробовать создать мозаику самому;</li>
+            <li>организовать обучение;</li>
+            <li>пригласить меня с лекцией о советском монументальном искусстве;</li>
+            <li>предложить совместный исследовательский или выставочный проект.</li>
+        </ul>
+
+        <p>А ещё я веду блог, где рассказываю о мозаике, её истории и людях, которые её создавали.</p>
+
+        <p style="font-weight:600; margin-top:16px; color:#fff;">Если вам интересна мозаика — как искусство, история, профессия или часть пространства, — свяжитесь со мной напрямую. Контакты ниже 👇</p>
     </div>
 
-    <!-- КОНТАКТЫ -->
+    <!-- ======================================== -->
+    <!-- КОНТАКТЫ                                 -->
+    <!-- ======================================== -->
     <h2 class="contacts-title" id="contacts">📱 Контакты</h2>
     <p>Если вам интересна мозаика — как искусство, история, профессия или часть пространства, — свяжитесь со мной.</p>
 
@@ -445,4 +460,4 @@ document.getElementById('whatsapp-form').addEventListener('submit', function(e) 
 
 </body>
 </html>
- 
+      
